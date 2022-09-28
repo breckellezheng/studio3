@@ -31,7 +31,30 @@ const updatePage = async () => {
   // TODO: Use either `map` and/or `filter` to extract some data from the array of fruit objects
   // For example, find "name of all fruits whose sugar > 15",
 
+  // function mapfunc(fruit) {
+  //   return fruit.name;
+  // }
+  const result = fruitsArray.filter((item) => {
+    return item.nutritions.sugar > 0.05;
+  })
+
+  console.log(result)
+  const result2 = result.map((item)=> {
+    return item.name;
+  }) 
+  console.log(result2)
+  // 
+
+  // console.log(result2)
   // TODO: Create a new HTML element to display your data
+    // Create a new HTML element and set its properties
+    const newElement = document.createElement('div');
+    for (var i = 0; i < result2.length; i++) {
+      newElement.innerHTML += result2[i] + '\n';
+    }
+  
+    // Append the new element to an existing part of the webpage
+    gallery.append(newElement);
 
   // TODO: Append your new element to the page
 

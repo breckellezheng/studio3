@@ -1,5 +1,6 @@
 #cs1300-gallery {
-  background-color: lightblue;
+  background-color: rgb(186, 138, 80);
+
 }
 
 /* Uncomment below if images are way too big.
@@ -11,4 +12,9 @@ Selects all image tags and makes them 500px;
 
 .gallery-container {
   /* TODO add styles (hint: use flex!) https://www.w3schools.com/cssref/ */
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 1rem;
 }
+
